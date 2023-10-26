@@ -1,0 +1,94 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>rock paper scissors</title>
+      <style>
+        body{
+          background-color: rgb(25, 25, 25);
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .head{
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .icon{
+          height: 50px;
+        }
+        .button{
+          background-color: transparent;
+          width: 120px;
+          height: 120px;
+          border-radius: 60px;
+          border: 3px solid white;
+          justify-content: space-between;
+          margin-right: 10px;
+          transition: 0.5s ease-out;
+          cursor: pointer;
+        }
+        .button:hover{
+          transform: scale(1);
+          border-color: rgb(25, 25, 25);
+          background-color: white;
+        }
+        .result{
+          font-size: 25px;
+          font-weight: bold;
+          margin-top: 50px;
+        }
+        .score{
+          margin-top: 60px;
+        }
+        .reset,
+        .auto{
+          background-color: white;
+          border: none;
+          font-size: 15px;
+          padding: 8px 15px;
+          color: black;
+          transition: 0.5s ease-out;
+        }
+        .reset,
+        .auto:hover{
+          background-color: black;
+          color: white;
+          font-size: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <p class="head">Rock Paper Scissors</p>
+      <button onclick="playGame('rock');" class="button" js-rock><img src="rock-emoji.png" class="icon"></button>
+
+      <button onclick="
+
+    playGame('paper');
+      "class="button"><img src="paper-emoji.png" class="icon"> </button>
+
+
+      <button onclick="
+
+    playGame('scissors');
+
+      "class="button" ><img src="scissors-emoji.png" class="icon"> </button>
+
+      <p class="js-result result" >Begin</p>
+      <p class="js-moves moves"></p>
+      <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElem();
+    " class="reset">Reset Score</button>
+    <button class="auto" onclick="
+    autoplay();
+    ">Auto Play</button>
+    <script src="scripts/rock-advanced.js"></script>
+          </body>
+          </html>
